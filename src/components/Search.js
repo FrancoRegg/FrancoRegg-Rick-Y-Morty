@@ -2,22 +2,15 @@ import React from 'react'
 
 const Search = ({search, setSearch}) => {
   
-
   const handleInputChange = ({target}) =>{
     setSearch(target.value)
   };
-  /*const handleSubmit = (e) => {
-    e.preventDeFault();
-    console.log("AQUI SEARCH",search);
-  };*/
-
-
+ 
     return (
-    <div>
+    <div className='container search'>
       <form > 
-        <input type='text' onChange={handleInputChange} value={search} className='form-control' placeholder='Search' />
+        <input type='text' onChange={handleInputChange} value={search} className='finder-character' placeholder='Look for your character...' />
       </form>
-      <button type='submit'> buscar</button>
     </div>
 
   )

@@ -1,11 +1,12 @@
 import React from "react";
 
-const Characters = ({ characters = [] }) => {
+const Characters = ({ characters, search }) => {
+  if(characters.length === 0 ) return <p>The character "{search}" does not exist</p>
   return (
     <div className="row">
       {characters.map((value, index) => (
-        <div className="col" key={index}>
-          <div className="card">
+        <div className="col card" key={index}>
+          <div className="card-character">
             <img src={value.image} alt=""/>
             <div className="card-body">
               <h5 className="card_title">{value.name}</h5>
